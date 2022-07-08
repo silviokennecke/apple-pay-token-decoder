@@ -1,14 +1,14 @@
-[![Travis CI](https://travis-ci.org/PayU-EMEA/apple-pay.svg)](https://travis-ci.org/PayU-EMEA/apple-pay) [![Latest Stable Version](https://poser.pugx.org/payu/apple-pay/v/stable.svg)](https://packagist.org/packages/payu/apple-pay) [![Total Downloads](https://poser.pugx.org/payu/apple-pay/downloads.svg)](https://packagist.org/packages/payu/apple-pay) [![License](https://poser.pugx.org/payu/apple-pay/license.svg)](https://packagist.org/packages/payu/apple-pay)
+[![CI](https://github.com/silviokennecke/apple-pay-token-decoder/actions/workflows/ci.yml/badge.svg)](https://github.com/silviokennecke/apple-pay-token-decoder/actions/workflows/ci.yml) [![Latest Stable Version](https://poser.pugx.org/silviokennecke/apple-pay-token-decoder/v/stable.svg)](https://packagist.org/packages/silviokennecke/apple-pay-token-decoder) [![Total Downloads](https://poser.pugx.org/silviokennecke/apple-pay-token-decoder/downloads.svg)](https://packagist.org/packages/silviokennecke/apple-pay-token-decoder) [![License](https://poser.pugx.org/silviokennecke/apple-pay-token-decoder/license.svg)](https://packagist.org/packages/silviokennecke/apple-pay-token-decoder)
 
 
-**Apple Pay Token Decoder**
+# Apple Pay Token Decoder
 
 This library is used to decode tokens for Apple Pay.
 
 It takes a payment token data and returns an ApplePayPaymentData object.
 ex:
 ```
-class PayU\ApplePay\Decoding\ApplePayPaymentData#19 (9) {
+class SilvioKennecke\ApplePay\Decoding\ApplePayPaymentData#19 (9) {
   private $version =>
   int(1)
   private $applicationPrimaryAccountNumber =>
@@ -31,13 +31,13 @@ class PayU\ApplePay\Decoding\ApplePayPaymentData#19 (9) {
 ```
 
 
-**Install:**
+## Install
 
-Run `composer require payu/apple-pay`
+Run `composer require silviokennecke/apple-pay-token-decoder`
 
-**Usage:**
+## Usage
 
-See https://github.com/PayU/apple-pay/blob/master/examples/decode_token.php
+See https://github.com/silviokennecke/apple-pay-token-decoder/blob/master/examples/decode_token.php
 
 For more information about how Apple Pay tokens decoding works go to:
 https://developer.apple.com/library/content/documentation/PassKit/Reference/PaymentTokenJSON/PaymentTokenJSON.html

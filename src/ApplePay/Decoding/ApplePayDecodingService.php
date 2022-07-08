@@ -21,7 +21,7 @@ class ApplePayDecodingService
     }
 
     /**
-     * @param $privateKey - the key used by PayU for generating the CSR. just the private key, no other formatting options: MHcCAQEEI.....8v8v1nMtag==
+     * @param $privateKey - the key used for generating the CSR. just the private key, no other formatting options: MHcCAQEEI.....8v8v1nMtag==
      * @param $merchantAppleId - hex value taken from Payment Processing Certificate, OID 1.2.840.113635.100.6.32 ex: 2D9940....5B844
      * @param array $paymentData - paymentData node from the token
      * @param $applePayRootCertificatePath
