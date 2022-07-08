@@ -10,6 +10,10 @@
             "name": "PayU Romania",
             "homepage": "https://www.payu.ro/",
             "email": "support@payu.ro"
+        },
+        {
+            "name": "Silvio Kennecke",
+            "homepage": "https://www.github.com/silviokennecke"
         }
     ],
     "autoload": {
@@ -17,8 +21,11 @@
             "PayU\\":  "src/"
         }
     },
+    "scripts": {
+        "phpunit": "phpunit -c phpunit.xml"
+    },
     "require": {
-        "php": "^5.6|7.*",
+        "php": ">=7.1",
         "ext-openssl": "*",
         "phpseclib/phpseclib": "^3.0",
         "phpseclib/phpseclib2_compat": "^1.0",
@@ -26,6 +33,6 @@
         "symfony/process": "^3.4|^4.1|^5.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.7|^6.5|^7.5"
+        "phpunit/phpunit": "^9.5"
     }
 }

@@ -27,7 +27,7 @@ class ApplePayDecodingServiceTest extends TestCase
     /** @var ApplePayDecodingService */
     private $applePayDecodingService;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->applePayDecoderFactoryMock = $this->getMockBuilder(ApplePayDecoderFactory::class)
             ->disableOriginalConstructor()
@@ -47,12 +47,11 @@ class ApplePayDecodingServiceTest extends TestCase
 
     }
 
-    /**
-     * @expectedException Exception
-     * @expectedExceptionMessage exception_message
-     */
     public function testExceptionIsThrownIfTokenIsNotValid()
     {
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessage('exception_message');
+
         $this->PKCS7SignatureValidatorMock->method('validate')->willThrowException(new Exception('exception_message'));
 
         $this->applePayDecodingService->decode('privateKey', 'merchantAppleId', [
@@ -61,12 +60,11 @@ class ApplePayDecodingServiceTest extends TestCase
     }
 
 
-    /**
-     * @expectedException Exception
-     * @expectedExceptionMessage exception_message
-     */
     public function testExceptionIsThrownIfTokenCannotBeDecoded()
     {
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessage('exception_message');
+
         $this->applePayEccDecoderMock->method('decode')->willThrowException(new Exception('exception_message'));
 
         $this->applePayDecodingService->decode('privateKey', 'merchantAppleId', [

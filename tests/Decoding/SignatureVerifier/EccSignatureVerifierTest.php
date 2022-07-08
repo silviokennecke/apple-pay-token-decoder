@@ -20,7 +20,7 @@ class EccSignatureVerifierTest extends TestCase
     /** @var EccSignatureVerifier */
     private $eccSignatureVerifier;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->asn1WrapperMock = $this->getMockBuilder(Asn1Wrapper::class)
             ->disableOriginalConstructor()
@@ -52,11 +52,10 @@ class EccSignatureVerifierTest extends TestCase
         $this->assertTrue($response);
     }
 
-    /**
-     * @expectedException \PayU\ApplePay\Decoding\SignatureVerifier\Exception\SignatureException
-     * @expectedExceptionMessage Invalid digest
-     */
     public function testInvalidDigest() {
+        $this->expectException(SignatureException::class);
+        $this->expectExceptionMessage('Invalid digest');
+
         $this->eccSignatureVerifier->verify([
             'signature' => 'ZHVtbXlkYXRh',
             'header' => [
@@ -68,11 +67,9 @@ class EccSignatureVerifierTest extends TestCase
     }
 
 
-    /**
-     * @expectedException \PayU\ApplePay\Decoding\SignatureVerifier\Exception\SignatureException
-     * @expectedExceptionMessage exception message
-     */
     public function testCannotVerifySignature() {
+        $this->expectException(SignatureException::class);
+        $this->expectExceptionMessage('exception message');
 
         $this->openSslServiceMock->method('verifySignature')->willThrowException(new SignatureException('exception message'));
 

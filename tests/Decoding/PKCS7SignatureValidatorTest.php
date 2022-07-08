@@ -29,7 +29,7 @@ class PKCS7SignatureValidatorTest extends TestCase
     /** @var PKCS7SignatureValidator */
     private $pkcs7SignatureValidator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->signatureVerifierFactoryMock = $this->getMockBuilder(SignatureVerifierFactory::class)
             ->disableOriginalConstructor()
@@ -60,11 +60,10 @@ class PKCS7SignatureValidatorTest extends TestCase
       );
     }
 
-    /**
-     * @expectedException \RuntimeException
-     * @expectedExceptionMessage Signature is not a valid base64 value
-     */
     public function testValidateThrowsExceptionIfSignatureIsNotBase64() {
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Signature is not a valid base64 value');
+
         $invalidSignature = '====';
 
         $this->pkcs7SignatureValidator->validate(
@@ -75,11 +74,10 @@ class PKCS7SignatureValidatorTest extends TestCase
     }
 
 
-    /**
-     * @expectedException \RuntimeException
-     * @expectedExceptionMessage Missing OID OID_VALUE from certificate
-     */
     public function testValidateThrowsExceptionIfOidIsMissing() {
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Missing OID OID_VALUE from certificate');
+
         $certificates = 'subject=/CN=ecc-smp-broker-sign_UC4-SANDBOX/OU=iOS Systems/O=Apple Inc./C=US
 issuer=/CN=Apple Application Integration CA - G3/OU=Apple Certification Authority/O=Apple Inc./C=US
 -----BEGIN CERTIFICATE-----

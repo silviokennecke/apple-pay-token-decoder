@@ -1,0 +1,22 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php_version: [7.1, 7.2, 7.3, 7.4, 8.0, 8.1]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: composer install
+        uses: php-actions/composer@v6
+        with:
+          php_version: ${{ matrix.php_version }}
+      - name: unit tests
+        uses: php-actions/composer@v6
+        with:
+          command: run phpunit
+          php_version: ${{ matrix.php_version }}

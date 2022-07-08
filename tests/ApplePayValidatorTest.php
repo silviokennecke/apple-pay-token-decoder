@@ -11,7 +11,7 @@ class ApplePayValidatorTest extends TestCase
     /** @var ApplePayValidator */
     private $applePayValidator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->applePayValidator = new ApplePayValidator();
     }
