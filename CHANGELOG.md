@@ -20,3 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - change namespace from `\PayU` to `\SilvioKennecke` to differ from the original project
 - change `\SilvioKennecke\ApplePay\Decoding\OpenSSL\OpenSslServiceTest` to use current a not outdated leaf certificate
 - change `\SilvioKennecke\ApplePay\Decoding\Decoder\Algorithms\Ecc::formatKey` to support already formatted keys
+
+[unreleased]: https://github.com/silviokennecke/apple-pay-token-decoder/compare/1.2.1...HEAD
+[1.2.1]: https://github.com/silviokennecke/apple-pay-token-decoder/compare/1.2.0...1.2.1
+[1.2.0]: https://github.com/silviokennecke/apple-pay-token-decoder/compare/caff194...1.2.0
