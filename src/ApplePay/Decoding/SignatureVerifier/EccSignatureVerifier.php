@@ -33,7 +33,7 @@ class EccSignatureVerifier implements SignatureVerifierInterface
      */
     public function verify(array $paymentData)
     {
-        $signedData = base64_decode($paymentData['header']['ephemeralPublicKey']) . base64_decode($paymentData['data']) . hex2bin($paymentData['header']['transactionId']);
+        $signedData = base64_decode($paymentData['header']['ephemeralPublicKey']) . base64_decode($paymentData['data']) . hex2bin($paymentData['header']['transactionId']) . hex2bin($paymentData['header']['applicationData'] ?? '');
         $signedHash = hash('sha256', $signedData, true);
 
         $this->asn1Wrapper->loadFromString(base64_decode($paymentData['signature']));
