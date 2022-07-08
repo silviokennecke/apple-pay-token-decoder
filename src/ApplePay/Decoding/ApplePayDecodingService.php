@@ -1,10 +1,10 @@
 <?php
 
-namespace PayU\ApplePay\Decoding;
+namespace SilvioKennecke\ApplePay\Decoding;
 
-use PayU\ApplePay\Decoding\Decoder\ApplePayDecoderFactory;
-use PayU\ApplePay\Exception\DecodingFailedException;
-use PayU\ApplePay\Exception\InvalidFormatException;
+use SilvioKennecke\ApplePay\Decoding\Decoder\ApplePayDecoderFactory;
+use SilvioKennecke\ApplePay\Exception\DecodingFailedException;
+use SilvioKennecke\ApplePay\Exception\InvalidFormatException;
 
 class ApplePayDecodingService
 {

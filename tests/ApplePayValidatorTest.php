@@ -1,8 +1,8 @@
 <?php
 
-namespace PayU\ApplePay;
+namespace SilvioKennecke\ApplePay;
 
-use PayU\ApplePay\Exception\InvalidFormatException;
+use SilvioKennecke\ApplePay\Exception\InvalidFormatException;
 
 use PHPUnit\Framework\TestCase;
 

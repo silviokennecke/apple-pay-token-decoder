@@ -1,6 +1,6 @@
 <?php
 
-namespace PayU\ApplePay\Decoding\Decoder\Algorithms;
+namespace SilvioKennecke\ApplePay\Decoding\Decoder\Algorithms;
 
 interface AlgorithmInterface
 {

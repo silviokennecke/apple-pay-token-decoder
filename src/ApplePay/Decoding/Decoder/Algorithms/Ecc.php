@@ -1,11 +1,11 @@
 <?php
 
-namespace PayU\ApplePay\Decoding\Decoder\Algorithms;
+namespace SilvioKennecke\ApplePay\Decoding\Decoder\Algorithms;
 
 use AESGCM\AESGCM;
 use Exception;
-use PayU\ApplePay\Decoding\OpenSSL\OpenSslService;
-use PayU\ApplePay\Decoding\TemporaryFile\TemporaryFileService;
+use SilvioKennecke\ApplePay\Decoding\OpenSSL\OpenSslService;
+use SilvioKennecke\ApplePay\Decoding\TemporaryFile\TemporaryFileService;
 
 class Ecc implements AlgorithmInterface
 {

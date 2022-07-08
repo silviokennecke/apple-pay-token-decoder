@@ -1,15 +1,14 @@
 {
-    "name": "payu/apple-pay",
+    "name": "silviokennecke/apple-pay-token-decoder",
     "description": "ApplePay Token Decoder",
     "type": "library",
     "license": "Apache-2.0",
     "keywords": ["php", "apple-pay", "openssl", "decryption"],
-    "homepage": "https://github.com/PayU/apple-pay",
+    "homepage": "https://github.com/silviokennecke/apple-pay-token-decoder",
     "authors": [
         {
             "name": "PayU Romania",
-            "homepage": "https://www.payu.ro/",
-            "email": "support@payu.ro"
+            "homepage": "https://github.com/PayU-EMEA/apple-pay"
         },
         {
             "name": "Silvio Kennecke",
@@ -18,7 +17,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "PayU\\":  "src/"
+            "SilvioKennecke\\":  "src/"
         }
     },
     "scripts": {

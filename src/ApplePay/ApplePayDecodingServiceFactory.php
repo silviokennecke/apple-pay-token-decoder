@@ -1,15 +1,15 @@
 <?php
 
-namespace PayU\ApplePay;
+namespace SilvioKennecke\ApplePay;
 
-use PayU\ApplePay\Decoding\ApplePayDecodingService;
-use PayU\ApplePay\Decoding\Asn1Wrapper;
-use PayU\ApplePay\Decoding\Decoder\ApplePayDecoderFactory;
-use PayU\ApplePay\Decoding\OpenSSL\OpenSslService;
-use PayU\ApplePay\Decoding\PKCS7SignatureValidator;
-use PayU\ApplePay\Decoding\PKCS7SignatureValidatorSettings;
-use PayU\ApplePay\Decoding\SignatureVerifier\SignatureVerifierFactory;
-use PayU\ApplePay\Decoding\TemporaryFile\TemporaryFileService;
+use SilvioKennecke\ApplePay\Decoding\ApplePayDecodingService;
+use SilvioKennecke\ApplePay\Decoding\Asn1Wrapper;
+use SilvioKennecke\ApplePay\Decoding\Decoder\ApplePayDecoderFactory;
+use SilvioKennecke\ApplePay\Decoding\OpenSSL\OpenSslService;
+use SilvioKennecke\ApplePay\Decoding\PKCS7SignatureValidator;
+use SilvioKennecke\ApplePay\Decoding\PKCS7SignatureValidatorSettings;
+use SilvioKennecke\ApplePay\Decoding\SignatureVerifier\SignatureVerifierFactory;
+use SilvioKennecke\ApplePay\Decoding\TemporaryFile\TemporaryFileService;
 use phpseclib\File\ASN1;
 
 class ApplePayDecodingServiceFactory

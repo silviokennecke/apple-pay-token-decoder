@@ -1,11 +1,11 @@
 <?php
 
-namespace PayU\ApplePay\Decoding;
+namespace SilvioKennecke\ApplePay\Decoding;
 
 use Exception;
-use PayU\ApplePay\Decoding\Decoder\ApplePayDecoderFactory;
-use PayU\ApplePay\Decoding\Decoder\ApplePayEccDecoder;
-use PayU\ApplePay\ApplePayValidator;
+use SilvioKennecke\ApplePay\Decoding\Decoder\ApplePayDecoderFactory;
+use SilvioKennecke\ApplePay\Decoding\Decoder\ApplePayEccDecoder;
+use SilvioKennecke\ApplePay\ApplePayValidator;
 use PHPUnit_Framework_MockObject_MockObject;
 
 use PHPUnit\Framework\TestCase;

@@ -1,10 +1,10 @@
 <?php
 
-namespace PayU\ApplePay\Decoding;
+namespace SilvioKennecke\ApplePay\Decoding;
 
-use PayU\ApplePay\Decoding\Decoder\Algorithms\Ecc;
-use PayU\ApplePay\Decoding\OpenSSL\OpenSslService;
-use PayU\ApplePay\Decoding\TemporaryFile\TemporaryFileService;
+use SilvioKennecke\ApplePay\Decoding\Decoder\Algorithms\Ecc;
+use SilvioKennecke\ApplePay\Decoding\OpenSSL\OpenSslService;
+use SilvioKennecke\ApplePay\Decoding\TemporaryFile\TemporaryFileService;
 use PHPUnit_Framework_MockObject_MockObject;
 
 use PHPUnit\Framework\TestCase;

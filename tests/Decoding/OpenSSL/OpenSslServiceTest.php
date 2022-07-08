@@ -1,9 +1,9 @@
 <?php
 
-namespace PayU\ApplePay\Decoding\OpenSSL;
+namespace SilvioKennecke\ApplePay\Decoding\OpenSSL;
 
-use PayU\ApplePay\ApplePaySettings;
-use PayU\ApplePay\Decoding\TemporaryFile\TemporaryFile;
+use SilvioKennecke\ApplePay\ApplePaySettings;
+use SilvioKennecke\ApplePay\Decoding\TemporaryFile\TemporaryFile;
 
 use PHPUnit\Framework\TestCase;
 

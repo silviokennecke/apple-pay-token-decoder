@@ -44,4 +44,6 @@ https://developer.apple.com/library/content/documentation/PassKit/Reference/Paym
 
 ## Attribution
 
-This is a fork of [PayU-EMEA/apple-pay](https://github.com/PayU-EMEA/apple-pay)
+This is a fork of [PayU-EMEA/apple-pay](https://github.com/PayU-EMEA/apple-pay).
+The original library was created by [PayU](https://github.com/PayU-EMEA).
+

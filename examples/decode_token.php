@@ -1,9 +1,9 @@
 <?php
 
-use PayU\ApplePay\ApplePayDecodingServiceFactory;
-use PayU\ApplePay\ApplePayValidator;
-use PayU\ApplePay\Exception\DecodingFailedException;
-use PayU\ApplePay\Exception\InvalidFormatException;
+use SilvioKennecke\ApplePay\ApplePayDecodingServiceFactory;
+use SilvioKennecke\ApplePay\ApplePayValidator;
+use SilvioKennecke\ApplePay\Exception\DecodingFailedException;
+use SilvioKennecke\ApplePay\Exception\InvalidFormatException;
 
 require __DIR__ . '/../vendor/autoload.php';
 

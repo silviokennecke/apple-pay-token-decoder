@@ -1,8 +1,8 @@
 <?php
 
-namespace PayU\ApplePay\Decoding\OpenSSL;
+namespace SilvioKennecke\ApplePay\Decoding\OpenSSL;
 
-use PayU\ApplePay\Decoding\SignatureVerifier\Exception\SignatureException;
+use SilvioKennecke\ApplePay\Decoding\SignatureVerifier\Exception\SignatureException;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 
