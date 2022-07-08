@@ -42,6 +42,6 @@ See https://github.com/PayU/apple-pay/blob/master/examples/decode_token.php
 For more information about how Apple Pay tokens decoding works go to:
 https://developer.apple.com/library/content/documentation/PassKit/Reference/PaymentTokenJSON/PaymentTokenJSON.html
 
-Only works on Linux hosts with openssl installed
+## Attribution
 
-For open pull requests please make sure the Travis build does not fail!
+This is a fork of [PayU-EMEA/apple-pay](https://github.com/PayU-EMEA/apple-pay)
