@@ -28,8 +28,8 @@ class Ecc implements AlgorithmInterface
      * @throws \RuntimeException
      */
     public function getSecret($privateKey, $ephemeralPublicKey) {
-        $publickeyData = $this->formatKey($ephemeralPublicKey, 'PUBLIC KEY');
-        $temporaryPublicKeyFile = $this->temporaryFileService->createFile($publickeyData);
+        $publicKeyData = $this->formatKey($ephemeralPublicKey, 'PUBLIC KEY');
+        $temporaryPublicKeyFile = $this->temporaryFileService->createFile($publicKeyData);
 
         $privateKeyData = $this->formatKey($privateKey, 'EC PRIVATE KEY');
         $temporaryPrivateKeyFile = $this->temporaryFileService->createFile($privateKeyData);
@@ -92,9 +92,16 @@ class Ecc implements AlgorithmInterface
      */
     private function formatKey($key, $type)
     {
-        $formattedData = '-----BEGIN ' . $type . '-----' . PHP_EOL;
+        $startKey = '-----BEGIN ' . $type . '-----';
+        $endKey = '-----END ' . $type . '-----';
+
+        if (strstr($key, $startKey) !== false && strpos($key, $endKey) !== false) {
+            return $key;
+        }
+
+        $formattedData = $startKey . PHP_EOL;
         $formattedData .= chunk_split($key, 64);
-        $formattedData .= '-----END ' . $type . '-----' . PHP_EOL;
+        $formattedData .= $endKey . PHP_EOL;
 
         return $formattedData;
     }

@@ -8,7 +8,11 @@ use PayU\ApplePay\Exception\InvalidFormatException;
 require __DIR__ . '/../vendor/autoload.php';
 
 // private key used to create the CSR 
-$privateKey = 'MHcCAQEEIEV17KjFHD0W014fRRnbM4Un9gkOEYhJz/A/qWPd9PIloAoGCCqGSM49AwEHoUQDQgAESRBiGT+GnbM3r1M4fhYEFUKe6EHA+z6r2ctjtWqeAs9wI48MBoGKFrwWqY/zbzMNYgaOm+DnUMjF8v8v1nMtag==';
+$privateKey = '-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEIEV17KjFHD0W014fRRnbM4Un9gkOEYhJz/A/qWPd9PIloAoGCCqGSM4
+9AwEHoUQDQgAESRBiGT+GnbM3r1M4fhYEFUKe6EHA+z6r2ctjtWqeAs9wI48MBo
+GKFrwWqY/zbzMNYgaOm+DnUMjF8v8v1nMtag==
+-----END EC PRIVATE KEY-----';
 
 // merchant identifier from Apple Pay Merchant Account
 $appleId = 'merchant.sandbox.payu';
