@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class PKCS7SignatureValidatorTest extends TestCase
 {
-    /** @var SignatureVerifierFactory */
+    /** @var SignatureVeriftestGetCertificatesFromPkcs7SuccessierFactory */
     private $signatureVerifierFactoryMock;
 
     /** @var Asn1Wrapper */
